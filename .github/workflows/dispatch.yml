@@ -44,4 +44,6 @@ jobs:
 
     - name: Install Requirements
       run: python -m pip install -r requirements.txt
-    
+
+    - name: Generate Report
+      run: python run-report.py

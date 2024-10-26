@@ -17,5 +17,5 @@ jobs:
       run: |
         echo "CURRENT_DATE: $CURRENT_DATE"
         echo "date: $(date)"
-        echo "Github context date: ${{ github.event.repository.pushed_at }}
+        echo "Github context date: ${{ github.event.repository.pushed_at }}"
       

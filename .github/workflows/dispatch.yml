@@ -39,4 +39,14 @@ jobs:
     - name: List Processes
       run: ps aux
 
+    - name: Setup Python
+      run: |
+        steps: 
+          - uses: actions/setup-python@v5
+            with:
+              python-version: '3.13' 
+          - run: python my_script.py
+
+    - name: Install Requirements
+      run: python -m pip install -r requirements.txt
     

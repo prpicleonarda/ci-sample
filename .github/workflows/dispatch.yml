@@ -18,4 +18,12 @@ jobs:
         echo "CURRENT_DATE: $CURRENT_DATE"
         echo "date: $(date)"
         echo "Github context date: ${{ github.event.repository.pushed_at }}"
-      
+
+    - name: Dump GitHub Context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
+
+    - name: List Directory Content
+      run: ls -al
+
